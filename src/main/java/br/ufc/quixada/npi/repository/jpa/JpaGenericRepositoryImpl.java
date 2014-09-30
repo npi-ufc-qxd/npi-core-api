@@ -1,4 +1,4 @@
-package br.com.ufc.quixada.npi.repository.jpa;
+package br.ufc.quixada.npi.repository.jpa;
 
 import java.util.List;
 import java.util.Map;
@@ -13,8 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.ufc.quixada.npi.enumeration.QueryType;
-import br.com.ufc.quixada.npi.repository.GenericRepository;
+import br.ufc.quixada.npi.enumeration.QueryType;
+import br.ufc.quixada.npi.repository.GenericRepository;
 
 
 @Named

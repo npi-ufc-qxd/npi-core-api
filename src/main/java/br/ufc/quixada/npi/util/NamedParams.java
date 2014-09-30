@@ -1,4 +1,4 @@
-package br.com.ufc.quixada.npi.util;
+package br.ufc.quixada.npi.util;
 
 
 

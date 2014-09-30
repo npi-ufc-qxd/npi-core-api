@@ -1,18 +1,12 @@
-package br.com.ufc.quixada.npi.repository;
+package br.ufc.quixada.npi.service;
 
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.EntityManager;
+import br.ufc.quixada.npi.enumeration.QueryType;
 
-import br.com.ufc.quixada.npi.enumeration.QueryType;
-
-
-
-public interface GenericRepository<T> {
-
-	public abstract void setEntityManager(EntityManager em);
-
+public interface GenericService<T> {
+	
 	public abstract void save(T entity);
 	
 	public abstract void update(T entity);
@@ -28,62 +22,20 @@ public interface GenericRepository<T> {
 	public abstract List<T> find(String queryName,
 			Map<String, Object> namedParams);
 
-	/**
-	 * 
-	 * @param type
-	 * @param query
-	 * @param namedParams
-	 * @return
-	 */
 	public abstract List<T> find(QueryType type, String query,
 			Map<String, Object> namedParams);
 
 	public abstract List<T> find(String queryName,
 			Map<String, Object> namedParams, int firstResult, int maxResults);
 
-	/**
-	 * 
-	 * @param type
-	 * @param query
-	 * @param namedParams
-	 * @param firstResult
-	 * @param maxResults
-	 * @return
-	 */
 	public abstract List<T> find(QueryType type, String query,
 			Map<String, Object> namedParams, int firstResult, int maxResults);
 
-	/**
-	 * 
-	 * @param query
-	 * @param namedParams
-	 * @return
-	 */
 	public abstract T findFirst(String query, Map<String, Object> namedParams);
 
-	/**
-	 * 
-	 * @param query
-	 * @param namedParams
-	 * @param firstResult
-	 * @param maxResults
-	 * @return
-	 */
 	public abstract T findFirst(String query, Map<String, Object> namedParams,
 			int firstResult);
 
-	/**
-	 * 
-	 * @param type
-	 * @param query
-	 * @param namedParams
-	 * @param firstResult
-	 * @param maxResults
-	 * @return
-	 */
 	public abstract T findFirst(QueryType type, String query,
 			Map<String, Object> namedParams, int firstResult);
-
-	
-
 }
