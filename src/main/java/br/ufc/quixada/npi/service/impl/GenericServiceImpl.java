@@ -1,4 +1,4 @@
-package br.com.ufc.quixada.npi.service.impl;
+package br.ufc.quixada.npi.service.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -8,9 +8,9 @@ import javax.inject.Named;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.ufc.quixada.npi.enumeration.QueryType;
-import br.com.ufc.quixada.npi.repository.GenericRepository;
-import br.com.ufc.quixada.npi.service.GenericService;
+import br.ufc.quixada.npi.enumeration.QueryType;
+import br.ufc.quixada.npi.repository.GenericRepository;
+import br.ufc.quixada.npi.service.GenericService;
 
 @Named
 public class GenericServiceImpl<T> implements GenericService<T> {

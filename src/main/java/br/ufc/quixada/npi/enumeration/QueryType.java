@@ -1,4 +1,4 @@
-package br.com.ufc.quixada.npi.enumeration;
+package br.ufc.quixada.npi.enumeration;
 
 public enum QueryType {
 	
