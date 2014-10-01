@@ -17,7 +17,7 @@ Para usar esta API basta configurá-la como dependência do seu projeto no arqui
   <repositories>
     <repository>
       <id>npi-core-api</id>
-      <url>https://raw.github.com/npi-ufc-qxd/npi-core-api/mvn-repo</url>
+      <url>https://raw.github.com/npi-ufc-qxd/npi-core-api/gh-pages</url>
       <snapshots>
         <enabled>true</enabled>
         <updatePolicy>always</updatePolicy>
