@@ -47,7 +47,7 @@ A exportação (*deploy*) da API para o repositório do GitHub é realizada atra
 mvn clean deploy
 ```
 
-Para que o deploy seja realizado para o GitHub é necessário configurar usuário e senha do GitHub no arquivo /Users/regis/.m2/settings.xml, conforme o exemplo a seguir:
+Para que o deploy seja realizado para o GitHub é necessário configurar usuário e senha do GitHub no arquivo ˜/.m2/settings.xml, conforme o exemplo a seguir:
 
 ```
 <!-- NOTE: MAKE SURE THAT settings.xml IS NOT WORLD READABLE! -->
