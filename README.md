@@ -30,7 +30,7 @@ Para usar esta API basta configurá-la como dependência do seu projeto no arqui
     <dependency>
       <groupId>br.ufc.quixada.npi</groupId>
       <artifactId>npi-core-api</artifactId>
-      <version>0.0.2</version>
+      <version>0.0.3</version>
     </dependency>
     ...
   </dependencies>
