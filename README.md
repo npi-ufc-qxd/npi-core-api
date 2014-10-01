@@ -17,7 +17,7 @@ Para usar esta API basta configurá-la como dependência do seu projeto no arqui
   <repositories>
     <repository>
       <id>npi-core-api</id>
-      <url>https://raw.github.com/npi-ufc-qxd/npi-core-api/gh-pages</url>
+      <url>http://npi-ufc-qxd.github.io/npi-core-api/</url>
       <snapshots>
         <enabled>true</enabled>
         <updatePolicy>always</updatePolicy>
@@ -30,7 +30,7 @@ Para usar esta API basta configurá-la como dependência do seu projeto no arqui
     <dependency>
       <groupId>br.ufc.quixada.npi</groupId>
       <artifactId>npi-core-api</artifactId>
-      <version>0.0.3</version>
+      <version>0.0.6</version>
     </dependency>
     ...
   </dependencies>
