@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.ufc.quixada.npi</groupId>
 	<artifactId>npi-core-api</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.7</version>
 	<packaging>jar</packaging>
 	<name>npi-core-api</name>
 
@@ -77,28 +77,6 @@
 				<configuration>
 					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.10</version>
-				<configuration>
-					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-					<includes>
-						<include>**/*</include>
-					</includes>
-					<repositoryName>npi-core-api</repositoryName>
-					<repositoryOwner>npi-ufc-qxd</repositoryOwner>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>deploy</phase>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
