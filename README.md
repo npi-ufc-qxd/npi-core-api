@@ -58,8 +58,8 @@ Para que o deploy seja realizado para o GitHub é necessário configurar usuári
   <servers>
       <server>
       <id>github</id>
-      <username>regispires</username>
-      <password>sig000er</password>
+      <username>usuário</username>
+      <password>senha</password>
     </server>
   </servers>
 </settings>
