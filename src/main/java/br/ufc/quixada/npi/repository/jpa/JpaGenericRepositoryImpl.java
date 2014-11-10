@@ -11,6 +11,7 @@ import javax.persistence.Query;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.ufc.quixada.npi.enumeration.QueryType;
@@ -51,6 +52,7 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	}
 
 	@Override
+	@Transactional
 	public T find(Class<T> entityClass, Object id) {
 		T result = null;
 		result = em.find(entityClass, id);
@@ -60,11 +62,11 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	@Override
 	public List<T> find(Class<T> entityClass) {
 		return find(entityClass, -1, -1);
-
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
+	@Transactional(readOnly=true)
 	public List<T> find(Class<T> entityClass, int firstResult, int maxResults) {
 		List<T> result = null;
 		Query q = em.createQuery("select obj from "
@@ -96,6 +98,7 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 
 	@SuppressWarnings("unchecked")
 	@Override
+	@Transactional(readOnly=true)
 	public List<T> find(QueryType type, String query,
 			Map<String, Object> namedParams, int firstResult, int maxResults) {
 		List<T> result = null;
@@ -140,6 +143,7 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public T findFirst(QueryType type, String query,
 			Map<String, Object> namedParams, int firstResult) {
 
