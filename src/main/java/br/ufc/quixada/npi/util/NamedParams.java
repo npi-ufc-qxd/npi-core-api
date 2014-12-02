@@ -1,13 +1,10 @@
 package br.ufc.quixada.npi.util;
 
-
-
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
 
 public class NamedParams implements Map<String, Object>, Serializable {
 	
@@ -20,13 +17,12 @@ public class NamedParams implements Map<String, Object>, Serializable {
 		putValues(entries);
 	}
 	
-	@SuppressWarnings("unchecked")
 	public NamedParams putValues(Object... entries) {
 		if (entries.length % 2 != 0)
 			throw new IllegalArgumentException("Espera-se número par de objetos: " + entries.length);
 		
 		if (this.realMap == null)
-			this.realMap = new HashMap(entries.length / 2);
+			this.realMap = new HashMap<String, Object>(entries.length / 2);
 		
 		for (int i = 0; i < entries.length; i += 2) {
 			Object key   = entries[i];

@@ -17,12 +17,17 @@
 		<!-- Logging -->
 		<slf4j-log4j12.version>1.7.6</slf4j-log4j12.version>
 		<!-- Spring -->
-		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.version>4.1.2.RELEASE</spring.version>
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.3.1.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -39,6 +44,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<!-- HIBERNATE -->
