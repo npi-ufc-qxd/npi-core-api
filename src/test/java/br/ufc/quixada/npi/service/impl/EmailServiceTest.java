@@ -2,7 +2,6 @@ package br.ufc.quixada.npi.service.impl;
 
 import java.util.Properties;
 
-import javax.inject.Named;
 import javax.mail.MessagingException;
 
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -10,7 +9,6 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 import br.ufc.quixada.npi.model.Email;
 import br.ufc.quixada.npi.service.EmailService;
 
-@Named
 public class EmailServiceTest {
 
 	public static void main(String[] args) {

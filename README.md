@@ -24,7 +24,7 @@ Para usar esta API basta configurá-la como dependência do seu projeto no arqui
     <dependency>
       <groupId>br.ufc.quixada.npi</groupId>
       <artifactId>npi-core-api</artifactId>
-      <version>0.0.8</version>
+      <version>0.0.9</version>
     </dependency>
     ...
   </dependencies>
