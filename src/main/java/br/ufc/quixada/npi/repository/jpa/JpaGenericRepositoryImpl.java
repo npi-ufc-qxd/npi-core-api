@@ -51,7 +51,7 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly=true)
 	public T find(Class<T> entityClass, Object id) {
 		T result = null;
 		result = em.find(entityClass, id);
@@ -59,6 +59,7 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public List<T> find(Class<T> entityClass) {
 		return find(entityClass, -1, -1);
 	}
@@ -78,17 +79,20 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public List<T> find(String queryName, Map<String, Object> namedParams) {
 		return find(QueryType.NAMED, queryName, namedParams);
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public List<T> find(QueryType type, String query,
 			Map<String, Object> namedParams) {
 		return find(type, query, namedParams, -1, -1);
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public List<T> find(String queryName, Map<String, Object> namedParams,
 			int firstResult, int maxResults) {
 		return find(QueryType.NAMED, queryName, namedParams, firstResult,
@@ -130,12 +134,14 @@ public class JpaGenericRepositoryImpl<T> implements GenericRepository<T> {
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public T findFirst(String query, Map<String, Object> namedParams) {
 		return findFirst(query, namedParams, -1);
 	}
 	
 
 	@Override
+	@Transactional(readOnly=true)
 	public T findFirst(String query, Map<String, Object> namedParams,
 			int firstResult) {
 		return findFirst(QueryType.NAMED, query, namedParams, firstResult);
