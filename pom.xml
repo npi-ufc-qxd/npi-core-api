@@ -6,6 +6,29 @@
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
 	<name>npi-core-api</name>
+	<description>API Core do NPI</description>
+	<url>https://github.com/npi-ufc-qxd/npi-core-api</url>
+
+	<licenses>
+    		<license>
+      			<name>GNU Lesser General Public License (LGPL), Version 2.1</name>
+      			<url>http://www.fsf.org/licensing/licenses/lgpl.txt</url>
+      			<distribution>repo</distribution>
+    		</license>
+  	</licenses>
+
+	<scm>
+    		<connection>scm:git:git://github.com/npi-ufc-qxd/npi-core-api.git</connection>
+    		<url>http://github.com/npi-ufc-qxd/npi-core-api.git</url>
+    		<developerConnection>http://github.com/npi-ufc-qxd/npi-core-api.git</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>npi</id>
+			<name>NPI</name>
+		</developer>	
+	</developers>
 
 	<properties>
 		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
@@ -116,6 +139,19 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+	        	<artifactId>maven-gpg-plugin</artifactId>
+	        	<version>1.6</version>
+	        	<executions>
+	          		<execution>
+	            		<phase>package</phase>
+	            		<goals>
+	              			<goal>sign</goal>
+	            		</goals>
+	          		</execution>
+	        	</executions>
+	      	</plugin>
 		</plugins>
+
 	</build>
 </project>
