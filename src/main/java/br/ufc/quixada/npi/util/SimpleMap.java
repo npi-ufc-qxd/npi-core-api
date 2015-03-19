@@ -16,6 +16,7 @@ public class SimpleMap<K, V> implements Map<K, V>, Serializable {
 		putValues(entries);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public SimpleMap<K, V> putValues(Object... entries) {
 		if (entries.length % 2 != 0)
 			throw new IllegalArgumentException("An even number of objects must be given: " + entries.length);

@@ -1,7 +1,6 @@
 package br.ufc.quixada.npi.service.impl;
 
 import java.util.List;
-import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
