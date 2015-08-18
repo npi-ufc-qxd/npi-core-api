@@ -25,7 +25,7 @@ Para usar esta API basta configurá-la como dependência do seu projeto no arqui
 
 ## Gerando libs em repositório local
 ```
-mvn clean deploy
+mvn clean deploy -Dgpg.passphrase=npicoreapi
 ```
 
 ## A API é armazenada no [Repositório Central do Maven](http://search.maven.org/#search%7Cga%7C1%7Cnpi-core-api).
