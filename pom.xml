@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.ufc.quixada.npi</groupId>
 	<artifactId>npi-core-api</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 	<packaging>jar</packaging>
 	<name>npi-core-api</name>
 	<description>API Core do NPI</description>
